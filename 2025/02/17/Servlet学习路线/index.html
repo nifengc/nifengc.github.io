@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
-  <meta name="robots" content="noindex,follow">
+  
   <meta name="generator" content="Hexo 7.3.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,16 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>归档 - 咖啡下肚</title>
+  <title>Servlet学习路线 - 咖啡下肚</title>
 
   
-    <meta name="description" content="日常喝咖啡(Java)的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://example.com/archives/2024/12/index.html">
+    <meta name="description" content="以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点 第一阶段：基础入门（2周）1. 环境搭建 安装JDK 17+ + Tomcat 10.x 配置IntelliJ IDEA的Web项目模板 创建第一个Servlet（@WebServlet注解方式）  2. HTTP协议精要 掌握请求结构：GET &#x2F;user?id&#x3D;1 HTTP&#x2F;1.1 理解状态码：200&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet学习路线">
+<meta property="og:url" content="http://example.com/2025/02/17/Servlet%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/index.html">
 <meta property="og:site_name" content="咖啡下肚">
-<meta property="og:description" content="日常喝咖啡(Java)的博客">
+<meta property="og:description" content="以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点 第一阶段：基础入门（2周）1. 环境搭建 安装JDK 17+ + Tomcat 10.x 配置IntelliJ IDEA的Web项目模板 创建第一个Servlet（@WebServlet注解方式）  2. HTTP协议精要 掌握请求结构：GET &#x2F;user?id&#x3D;1 HTTP&#x2F;1.1 理解状态码：200&amp;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-17T13:20:22.256Z">
+<meta property="article:modified_time" content="2025-02-17T13:22:40.027Z">
 <meta property="article:author" content="小小抄">
 <meta property="article:tag" content="Java、SpringBoot、MyBatis、SpringCloud">
 <meta name="twitter:card" content="summary">
@@ -49,7 +51,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/xxd.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">咖啡下肚</div></a></div></header>
@@ -61,21 +63,236 @@
 <nav class="menu dis-select"><a class="nav-item active" title="博客" href="/" style="color:#1BCDFC"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.879 2.879C5 3.757 5 5.172 5 8v8c0 2.828 0 4.243.879 5.121C6.757 22 8.172 22 11 22h2c2.828 0 4.243 0 5.121-.879C19 20.243 19 18.828 19 16V8c0-2.828 0-4.243-.879-5.121C17.243 2 15.828 2 13 2h-2c-2.828 0-4.243 0-5.121.879M8.25 17a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 0 1.5H9a.75.75 0 0 1-.75-.75M9 12.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zM8.25 9A.75.75 0 0 1 9 8.25h6a.75.75 0 0 1 0 1.5H9A.75.75 0 0 1 8.25 9" clip-rule="evenodd"/><path fill="currentColor" d="M5.235 4.058C5 4.941 5 6.177 5 8v8c0 1.823 0 3.058.235 3.942L5 19.924c-.975-.096-1.631-.313-2.121-.803C2 18.243 2 16.828 2 14v-4c0-2.829 0-4.243.879-5.121c.49-.49 1.146-.707 2.121-.803zm13.53 15.884C19 19.058 19 17.822 19 16V8c0-1.823 0-3.059-.235-3.942l.235.018c.975.096 1.631.313 2.121.803C22 5.757 22 7.17 22 9.999v4c0 2.83 0 4.243-.879 5.122c-.49.49-1.146.707-2.121.803z" opacity=".5"/></svg></a><a class="nav-item" title="文档" href="/wiki/" style="color:#3DC550"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M14.25 4.48v3.057c0 .111 0 .27.02.406a.936.936 0 0 0 .445.683a.96.96 0 0 0 .783.072c.13-.04.272-.108.378-.159L17 8.005l1.124.534c.106.05.248.119.378.16a.958.958 0 0 0 .783-.073a.936.936 0 0 0 .444-.683c.021-.136.021-.295.021-.406V3.031c.113-.005.224-.01.332-.013C21.154 2.98 22 3.86 22 4.933v11.21c0 1.112-.906 2.01-2.015 2.08c-.97.06-2.108.179-2.985.41c-1.082.286-1.99 1.068-3.373 1.436c-.626.167-1.324.257-1.627.323V5.174c.32-.079 1.382-.203 1.674-.371c.184-.107.377-.216.576-.323m5.478 8.338a.75.75 0 0 1-.546.91l-4 1a.75.75 0 0 1-.364-1.456l4-1a.75.75 0 0 1 .91.546" clip-rule="evenodd"/><path fill="currentColor" d="M18.25 3.151c-.62.073-1.23.18-1.75.336a8.2 8.2 0 0 0-.75.27v3.182l.75-.356l.008-.005a1.13 1.13 0 0 1 .492-.13c.047 0 .094.004.138.01c.175.029.315.1.354.12l.009.005l.749.356V3.647z"/><path fill="currentColor" d="M12 5.214c-.334-.064-1.057-.161-1.718-.339C8.938 4.515 8.05 3.765 7 3.487c-.887-.234-2.041-.352-3.018-.412C2.886 3.007 2 3.9 2 4.998v11.146c0 1.11.906 2.01 2.015 2.079c.97.06 2.108.179 2.985.41c.486.129 1.216.431 1.873.726c1.005.451 2.052.797 3.127 1.034z" opacity=".5"/><path fill="currentColor" d="M4.273 12.818a.75.75 0 0 1 .91-.545l4 1a.75.75 0 1 1-.365 1.455l-4-1a.75.75 0 0 1-.545-.91m.909-4.545a.75.75 0 1 0-.364 1.455l4 1a.75.75 0 0 0 .364-1.455z"/></svg></a><a class="nav-item" title="探索" href="/explore/" style="color:#FA6400"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M20 12a8 8 0 1 1-16 0a8 8 0 0 1 16 0" opacity=".5"/><path fill="currentColor" d="M17.712 5.453c1.047-.193 2.006-.259 2.797-.152c.77.103 1.536.393 1.956 1.064c.446.714.312 1.542-.012 2.258c-.33.728-.918 1.499-1.672 2.268c-1.516 1.547-3.836 3.226-6.597 4.697c-2.763 1.472-5.495 2.484-7.694 2.92c-1.095.217-2.098.299-2.923.201c-.8-.095-1.6-.383-2.032-1.075c-.47-.752-.296-1.63.07-2.379c.375-.768 1.032-1.586 1.872-2.403L4 12.416c0 .219.083.71.168 1.146c.045.23.09.444.123.596c-.652.666-1.098 1.263-1.339 1.756c-.277.567-.208.825-.145.925c.072.116.305.305.937.38c.609.073 1.44.018 2.455-.183c2.02-.4 4.613-1.351 7.28-2.772c2.667-1.42 4.85-3.015 6.23-4.423c.694-.707 1.15-1.334 1.377-1.836c.233-.515.167-.75.107-.844c-.07-.112-.289-.294-.883-.374c-.542-.072-1.272-.041-2.163.112L16.87 5.656c.338-.101.658-.17.842-.203"/></svg></a><a class="nav-item" title="社交" href="/friends/" style="color:#F44336"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.629 20.472l-.542.916c-.483.816-1.69.816-2.174 0l-.542-.916c-.42-.71-.63-1.066-.968-1.262c-.338-.197-.763-.204-1.613-.219c-1.256-.021-2.043-.098-2.703-.372a5 5 0 0 1-2.706-2.706C2 14.995 2 13.83 2 11.5v-1c0-3.273 0-4.91.737-6.112a5 5 0 0 1 1.65-1.651C5.59 2 7.228 2 10.5 2h3c3.273 0 4.91 0 6.113.737a5 5 0 0 1 1.65 1.65C22 5.59 22 7.228 22 10.5v1c0 2.33 0 3.495-.38 4.413a5 5 0 0 1-2.707 2.706c-.66.274-1.447.35-2.703.372c-.85.015-1.275.022-1.613.219c-.338.196-.548.551-.968 1.262" opacity=".5"/><path fill="currentColor" d="M10.99 14.308c-1.327-.978-3.49-2.84-3.49-4.593c0-2.677 2.475-3.677 4.5-1.609c2.025-2.068 4.5-1.068 4.5 1.609c0 1.752-2.163 3.615-3.49 4.593c-.454.335-.681.502-1.01.502c-.329 0-.556-.167-1.01-.502"/></svg></a></nav>
 </div>
 <div class="widgets">
+
+
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/02/17/Servlet%E9%A1%B9%E7%9B%AE/"><span class="title">Servlet项目</span></a><a class="item title" href="/2025/02/17/Servlet%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"><span class="title">Servlet学习路线</span></a><a class="item title" href="/2025/02/16/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E8%87%AA%E5%B7%B1%E4%B8%8D%E9%80%82%E5%90%88%E5%81%9A%E4%B8%80%E5%90%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88/"><span class="title">如何判断自己不适合做一名软件开发工程师</span></a><a class="item title" href="/2025/02/15/%E5%88%9D%E7%BA%A7/"><span class="title">初级</span></a><a class="item title" href="/2025/02/15/%E6%8A%80%E6%9C%AF%E6%9D%BE%E9%BC%A0%E7%97%87/"><span class="title">技术松鼠症</span></a><a class="item title" href="/2025/02/15/HashMap/"><span class="title">HashMap方法集详解</span></a><a class="item title" href="/2024/12/28/hello-world/"><span class="title">Hello World</span></a><a class="item title" href="/2024/12/28/java%E4%B8%AD%E7%9A%84%E5%A4%A7%E6%95%B0/"><span class="title">java中的大数</span></a><a class="item title" href="/2024/12/28/jdk21%E6%96%B0%E7%89%B9%E6%80%A7/"><span class="title">jdk21新特性</span></a><a class="item title" href="/2024/12/28/typeScript%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C/"><span class="title">typeScript命令行运行</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/xxd.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">咖啡下肚</div></a></div></header>
-
- 
 
 
-<div class="navbar top"><nav class="post"><a href="/">近期发布</a><a class="active" href="/archives/">归档</a></nav></div><div class="post-list archives"><article class="" id="archive"><div class='archive-header h4'>2025</div><div class="archive-list"><a class='post fs14' href="/2025/02/17/Servlet%E9%A1%B9%E7%9B%AE/"><time>02-17</time><span>Servlet项目</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/02/17/Servlet%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/"><time>02-17</time><span>Servlet学习路线</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/02/16/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E8%87%AA%E5%B7%B1%E4%B8%8D%E9%80%82%E5%90%88%E5%81%9A%E4%B8%80%E5%90%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88/"><time>02-16</time><span>如何判断自己不适合做一名软件开发工程师</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/02/15/%E6%8A%80%E6%9C%AF%E6%9D%BE%E9%BC%A0%E7%97%87/"><time>02-15</time><span>技术松鼠症</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/02/15/%E5%88%9D%E7%BA%A7/"><time>02-15</time><span>初级</span></a></div><div class="archive-list"><a class='post fs14' href="/2025/02/15/HashMap/"><time>02-15</time><span>HashMap方法集详解</span></a></div></article><article class="" id="archive"><div class='archive-header h4'>2024</div><div class="archive-list"><a class='post fs14' href="/2024/12/28/typeScript%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%90%E8%A1%8C/"><time>12-28</time><span>typeScript命令行运行</span></a></div><div class="archive-list"><a class='post fs14' href="/2024/12/28/jdk21%E6%96%B0%E7%89%B9%E6%80%A7/"><time>12-28</time><span>jdk21新特性</span></a></div><div class="archive-list"><a class='post fs14' href="/2024/12/28/java%E4%B8%AD%E7%9A%84%E5%A4%A7%E6%95%B0/"><time>12-28</time><span>java中的大数</span></a></div><div class="archive-list"><a class='post fs14' href="/2024/12/28/hello-world/"><time>12-28</time><span>Hello World</span></a></div></article></div>
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-02-17T13:20:22.256Z">2025-02-17</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-02-17T13:22:40.027Z">2025-02-17</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Servlet学习路线</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h3 id="以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点"><a href="#以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点" class="headerlink" title="以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点"></a><strong>以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点</strong></h3><hr>
+<h3 id="第一阶段：基础入门（2周）"><a href="#第一阶段：基础入门（2周）" class="headerlink" title="第一阶段：基础入门（2周）"></a><strong>第一阶段：基础入门（2周）</strong></h3><h4 id="1-环境搭建"><a href="#1-环境搭建" class="headerlink" title="1. 环境搭建"></a>1. 环境搭建</h4><ul>
+<li>安装JDK 17+ + Tomcat 10.x</li>
+<li>配置IntelliJ IDEA的Web项目模板</li>
+<li>创建第一个Servlet（<code>@WebServlet</code>注解方式）</li>
+</ul>
+<h4 id="2-HTTP协议精要"><a href="#2-HTTP协议精要" class="headerlink" title="2. HTTP协议精要"></a>2. HTTP协议精要</h4><ul>
+<li>掌握请求结构：<code>GET /user?id=1 HTTP/1.1</code></li>
+<li>理解状态码：200&#x2F;404&#x2F;500</li>
+<li>实验：使用Postman发送不同请求类型</li>
+</ul>
+<h4 id="3-Servlet生命周期"><a href="#3-Servlet生命周期" class="headerlink" title="3. Servlet生命周期"></a>3. Servlet生命周期</h4><ul>
+<li>实现<code>init()</code> → <code>service()</code> → <code>destroy()</code></li>
+<li>配置<code>&lt;load-on-startup&gt;</code>参数</li>
+<li>示例：统计Servlet被访问次数</li>
+</ul>
+<h4 id="4-请求响应处理"><a href="#4-请求响应处理" class="headerlink" title="4. 请求响应处理"></a>4. 请求响应处理</h4><ul>
+<li>获取参数：<code>request.getParameter(&quot;name&quot;)</code></li>
+<li>设置响应头：<code>response.setContentType()</code></li>
+<li>实践：开发文件下载功能</li>
+</ul>
+<hr>
+<h3 id="第二阶段：深度掌握（2周）"><a href="#第二阶段：深度掌握（2周）" class="headerlink" title="第二阶段：深度掌握（2周）"></a><strong>第二阶段：深度掌握（2周）</strong></h3><h4 id="1-会话管理"><a href="#1-会话管理" class="headerlink" title="1. 会话管理"></a>1. 会话管理</h4><ul>
+<li>Cookie机制：<code>Cookie userCookie = new Cookie(&quot;user&quot;, &quot;admin&quot;)</code></li>
+<li>Session实现：<code>HttpSession session = request.getSession()</code></li>
+<li>案例：实现购物车功能</li>
+</ul>
+<h4 id="2-过滤器与监听器"><a href="#2-过滤器与监听器" class="headerlink" title="2. 过滤器与监听器"></a>2. 过滤器与监听器</h4><ul>
+<li>开发字符编码过滤器（<code>CharacterEncodingFilter</code>）</li>
+<li>实现<code>ServletRequestListener</code>统计请求量</li>
+<li>实践：日志记录过滤器</li>
+</ul>
+<h4 id="3-文件上传"><a href="#3-文件上传" class="headerlink" title="3. 文件上传"></a>3. 文件上传</h4><ul>
+<li>使用<code>Part</code>接口处理文件：<code>request.getPart(&quot;file&quot;)</code></li>
+<li>配置<code>@MultipartConfig</code></li>
+<li>示例：头像上传功能</li>
+</ul>
+<hr>
+<h3 id="第三阶段：整合应用（3周）"><a href="#第三阶段：整合应用（3周）" class="headerlink" title="第三阶段：整合应用（3周）"></a><strong>第三阶段：整合应用（3周）</strong></h3><h4 id="1-数据库集成"><a href="#1-数据库集成" class="headerlink" title="1. 数据库集成"></a>1. 数据库集成</h4><ul>
+<li>配置Druid连接池</li>
+<li>使用JDBC Template操作数据库</li>
+<li>案例：用户管理系统CRUD</li>
+</ul>
+<h4 id="2-JSP整合"><a href="#2-JSP整合" class="headerlink" title="2. JSP整合"></a>2. JSP整合</h4><ul>
+<li>掌握EL表达式：<code>$&#123;user.name&#125;</code></li>
+<li>学习JSTL标签：<code>&lt;c:forEach&gt;</code></li>
+<li>实践：开发图书管理系统前端页面</li>
+</ul>
+<h4 id="3-MVC模式实现"><a href="#3-MVC模式实现" class="headerlink" title="3. MVC模式实现"></a>3. MVC模式实现</h4><ul>
+<li>自定义前端控制器（Front Controller）</li>
+<li>实现请求路由映射</li>
+<li>项目：仿Spring MVC简易框架</li>
+</ul>
+<hr>
+<h3 id="第四阶段：性能优化（1周）"><a href="#第四阶段：性能优化（1周）" class="headerlink" title="第四阶段：性能优化（1周）"></a><strong>第四阶段：性能优化（1周）</strong></h3><h4 id="1-线程安全"><a href="#1-线程安全" class="headerlink" title="1. 线程安全"></a>1. 线程安全</h4><ul>
+<li>分析Servlet的线程安全问题</li>
+<li>使用<code>synchronized</code>保护共享资源</li>
+<li>案例：库存扣减场景</li>
+</ul>
+<h4 id="2-连接池优化"><a href="#2-连接池优化" class="headerlink" title="2. 连接池优化"></a>2. 连接池优化</h4><ul>
+<li>配置Tomcat JDBC Pool</li>
+<li>设置最大活跃连接数</li>
+<li>压力测试：JMeter模拟100并发</li>
+</ul>
+<h4 id="3-缓存策略"><a href="#3-缓存策略" class="headerlink" title="3. 缓存策略"></a>3. 缓存策略</h4><ul>
+<li>使用Ehcache缓存热点数据</li>
+<li>实现响应内容缓存</li>
+<li>示例：商品分类缓存</li>
+</ul>
+<hr>
+<h3 id="配套实战项目"><a href="#配套实战项目" class="headerlink" title="配套实战项目"></a><strong>配套实战项目</strong></h3><ol>
+<li><strong>项目1：电商用户中心</strong></li>
+</ol>
+<ul>
+<li>功能模块：注册&#x2F;登录&#x2F;个人资料</li>
+<li>技术点：Session维持登录状态、MD5密码加密</li>
+<li>代码量：约1500行</li>
+</ul>
+<ol start="2">
+<li><strong>项目2：在线文档管理系统</strong></li>
+</ol>
+<ul>
+<li>功能模块：文件上传&#x2F;权限控制&#x2F;版本管理</li>
+<li>技术点：RBAC权限模型、文件断点续传</li>
+<li>代码量：约3000行</li>
+</ul>
+<ol start="3">
+<li><strong>项目3：API网关原型</strong></li>
+</ol>
+<ul>
+<li>功能模块：路由转发&#x2F;限流熔断</li>
+<li>技术点：过滤器链、令牌桶算法</li>
+<li>代码量：约2000行</li>
+</ul>
+<hr>
+<h3 id="学习资源推荐"><a href="#学习资源推荐" class="headerlink" title="学习资源推荐"></a><strong>学习资源推荐</strong></h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>推荐内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>经典书籍</td>
+<td>《Head First Servlets &amp; JSP》</td>
+</tr>
+<tr>
+<td>在线课程</td>
+<td>极客时间《Java Web开发实战》</td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>Oracle Java EE 8教程</td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>Postman + VisualVM</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="学习路线表"><a href="#学习路线表" class="headerlink" title="学习路线表"></a><strong>学习路线表</strong></h3><table>
+<thead>
+<tr>
+<th>周数</th>
+<th>学习重点</th>
+<th>关键实践任务</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Servlet基础+HTTP协议</td>
+<td>开发文件下载服务器</td>
+</tr>
+<tr>
+<td>2</td>
+<td>会话管理+过滤器</td>
+<td>实现购物车系统</td>
+</tr>
+<tr>
+<td>3</td>
+<td>JSP整合+EL表达式</td>
+<td>构建图书管理前端</td>
+</tr>
+<tr>
+<td>4</td>
+<td>JDBC整合+连接池</td>
+<td>用户管理系统CRUD</td>
+</tr>
+<tr>
+<td>5</td>
+<td>MVC模式+自定义框架</td>
+<td>仿Spring MVC路由实现</td>
+</tr>
+<tr>
+<td>6</td>
+<td>性能优化+安全防护</td>
+<td>压力测试与缓存优化</td>
+</tr>
+<tr>
+<td>7</td>
+<td>项目实战1</td>
+<td>完成电商用户中心</td>
+</tr>
+<tr>
+<td>8</td>
+<td>项目实战2</td>
+<td>构建文档管理系统</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="常见误区提醒"><a href="#常见误区提醒" class="headerlink" title="常见误区提醒"></a><strong>常见误区提醒</strong></h3><ol>
+<li><strong>忽略HTTP协议基础</strong>：直接跳转框架学习导致原理不清</li>
+<li><strong>过度依赖框架</strong>：应先掌握原生Servlet开发能力</li>
+<li><strong>线程安全意识薄弱</strong>：在多用户场景出现数据错乱</li>
+<li><strong>异常处理不完善</strong>：未正确关闭数据库连接等资源</li>
+</ol>
+<p>通过这个路线系统学习，可达到独立开发企业级Web应用的水平，并为学习Spring MVC打下坚实基础。建议每周保持至少15小时的有效学习时间，重点模块配合思维导图加深理解。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2025/02/17/Servlet%E9%A1%B9%E7%9B%AE/">Servlet项目</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/02/16/%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E8%87%AA%E5%B7%B1%E4%B8%8D%E9%80%82%E5%90%88%E5%81%9A%E4%B8%80%E5%90%8D%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88/">如何判断自己不适合做一名软件开发工程师</a></div></section></div>
+
+
+
+
+
+
 <footer class="page-footer footnote"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs15">博客</span><a href="/">近期</a><a href="/">分类</a><a href="/">标签</a><a href="/">归档</a></div><div class="sitemap-group"><span class="fs15">项目</span><a href="/">开源库</a></div><div class="sitemap-group"><span class="fs15">社交</span><a href="/">友链</a><a href="/">留言板</a></div><div class="sitemap-group"><span class="fs15">更多</span><a href="/">关于本站</a><a href="/">GitHub</a></div></div><div class="text"><p>本站由 <a href="/">小小抄</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar 1.29.1</a> 主题创建。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AF%E4%B8%BA%E6%9C%9F2%E4%B8%AA%E6%9C%88%E7%9A%84Servlet%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%EF%BC%8C%E7%BB%93%E5%90%88%E7%90%86%E8%AE%BA%E5%AE%9E%E8%B7%B5%E5%B9%B6%E9%87%8D%EF%BC%8C%E5%8C%85%E5%90%AB%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%88%B0%E9%AB%98%E7%BA%A7%E7%9A%84%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-text">以下是为期2个月的Servlet系统学习路线，结合理论实践并重，包含从基础到高级的核心知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8%EF%BC%882%E5%91%A8%EF%BC%89"><span class="toc-text">第一阶段：基础入门（2周）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-text">1. 环境搭建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-HTTP%E5%8D%8F%E8%AE%AE%E7%B2%BE%E8%A6%81"><span class="toc-text">2. HTTP协议精要</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-Servlet%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-text">3. Servlet生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94%E5%A4%84%E7%90%86"><span class="toc-text">4. 请求响应处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%EF%BC%9A%E6%B7%B1%E5%BA%A6%E6%8E%8C%E6%8F%A1%EF%BC%882%E5%91%A8%EF%BC%89"><span class="toc-text">第二阶段：深度掌握（2周）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86"><span class="toc-text">1. 会话管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B8%8E%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-text">2. 过滤器与监听器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-text">3. 文件上传</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%EF%BC%9A%E6%95%B4%E5%90%88%E5%BA%94%E7%94%A8%EF%BC%883%E5%91%A8%EF%BC%89"><span class="toc-text">第三阶段：整合应用（3周）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E6%88%90"><span class="toc-text">1. 数据库集成</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-JSP%E6%95%B4%E5%90%88"><span class="toc-text">2. JSP整合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-MVC%E6%A8%A1%E5%BC%8F%E5%AE%9E%E7%8E%B0"><span class="toc-text">3. MVC模式实现</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5%EF%BC%9A%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%EF%BC%881%E5%91%A8%EF%BC%89"><span class="toc-text">第四阶段：性能优化（1周）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-text">1. 线程安全</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%BF%9E%E6%8E%A5%E6%B1%A0%E4%BC%98%E5%8C%96"><span class="toc-text">2. 连接池优化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%BC%93%E5%AD%98%E7%AD%96%E7%95%A5"><span class="toc-text">3. 缓存策略</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E5%A5%97%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE"><span class="toc-text">配套实战项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90"><span class="toc-text">学习资源推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF%E8%A1%A8"><span class="toc-text">学习路线表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA%E6%8F%90%E9%86%92"><span class="toc-text">常见误区提醒</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
